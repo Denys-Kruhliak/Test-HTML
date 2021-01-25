@@ -1,0 +1,439 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container-lg{
+    padding: 0;
+}
+body{
+    background-color: #484848;
+}
+header{
+    width: 100%;
+    background-color: #171614;
+    color: white;
+    padding: 0 30px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+header>.logo{
+    background-color: #12be63;
+    width: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 5px 50px 5px 15px;
+}
+header>.navig{
+    width: 50vw;
+}
+header ul{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    list-style: none;
+    text-align: center;
+    padding: 0;
+}
+header ul>li{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+header ul>li>a{
+    color: white;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    font-size: large;
+    font-weight: 600;
+}
+header ul>li>img{
+    display: none;
+}
+header ul>li:hover{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header ul>li:hover img{
+    display: inline;
+    position: absolute;
+    top: 25px;
+    width: 100%;
+    max-width: 100px;
+
+}
+
+/* Слайдер */
+
+.slider{
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid: 70% 30%/20% 20% 20% 20% 20%;
+    background-color: #171614;
+}
+
+.slider label{
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+    margin: auto;
+}
+.slider label  .chec{
+    display: none;
+}
+.slider>.slides{
+    overflow: hidden;
+    grid-row: 1/1;
+    grid-column: 1/6;
+}
+.slider>.slides ul{
+    width: 500%;
+    display: flex;
+    transition: margin-left 2s;
+    list-style: none;
+}
+.slider>.slides ul li{
+    width: 20%;
+}
+.slider>.slides ul li img{
+    width: 100%;
+}
+.slider>.slides>.zag{
+    background-color: white;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 45%;
+    left: 70%;
+    width: 25%;
+    padding: 5px;
+}
+/* точки */
+.slider input{
+    display: none;
+}
+.slider input:checked+label .chec{
+    display: block;
+    opacity: 1;
+}
+.slider #r2:checked~.slides ul{
+    margin-left: -100%;
+}
+.slider #r3:checked~.slides ul{
+    margin-left: -200%;
+}
+.slider #r4:checked~.slides ul{
+    margin-left: -300%;
+}
+.slider #r5:checked~.slides ul{
+    margin-left: -400%;
+}
+
+.slider .arrow{
+    width: 15px;
+    height: 37px;
+    background-image: url(../images/arrows.png);
+    position: absolute;
+    top: 50%;
+    margin-top: -18px;
+    display: none;
+    padding: 0;
+    padding-right: 30px;
+}
+.slider #r1:checked~#arrow2,
+.slider #r2:checked~#arrow3,
+.slider #r3:checked~#arrow4,
+.slider #r4:checked~#arrow5{
+    right: 0;
+    display: block;
+    background-position: 100% 0;
+}
+.slider #r2:checked~#arrow1,
+.slider #r3:checked~#arrow2,
+.slider #r4:checked~#arrow3,
+.slider #r5:checked~#arrow4{
+    display: block; 
+}
+
+main{
+    background-color: white;
+}
+
+/* Сервисы */
+
+.services{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 50px 20px 50px 20px;
+    text-align: center;
+}
+.services div{
+    margin: 0 10px;
+}
+.services div p strong{
+    color: #12be60;
+}
+.services h4{
+    margin: 20px 0px;
+}
+
+/* Заголовок */
+
+.main-zag{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.main-zag img{
+    height: 100%;
+}
+.main-zag h3{
+    text-transform: uppercase;
+    margin: 0 20px;
+    text-align: center;
+}
+
+/* Новые продукты */
+
+.new-products>.item2{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+.new-products>.item2>.left,.right{
+    background-color: #12be60;
+    width: 10%;
+    max-height: 190px;
+    padding: 1% ;
+    text-align: center;
+    color: white;
+}
+.new-products>.item2 .center{
+    width: 70%;
+
+}
+.new-products>.item2 strong{
+    color: #12be60;
+}
+.new-products>.item2 img{
+    width: 100%;
+    margin-bottom: 10px;
+}
+.new-products>.item2>.center>.rate{
+    display: flex;
+    justify-content: space-between;
+
+}
+.new-products>.item2>.center>.rate>.star{
+    display: flex;
+    margin: 20px 0;
+}
+.new-products>.item2>.center>.rate h4{
+    margin: 20px 0;
+}
+.new-products>.item2>.center>.rate p{
+    margin-right: 10px;
+}
+.new-products>.item2>.center>.rate i{
+    color: gold;
+}
+
+/* Все продукты */
+
+.all-products{
+    padding: 20px;
+}
+.all-products>.gri{
+    display: grid;
+    grid: 50% 50%/25% 25% 25% 25%; 
+}
+.all-products>.gri span{
+    text-decoration: line-through;
+}
+.all-products>.gri strong{
+    color: #12be60;
+}
+.all-products .img-prod{
+    width: 100%;
+}
+.all-products .prod{
+    margin: 15px;
+    
+}
+.all-products .img-logo{
+    position: relative;
+    right: -70%;
+    bottom: 225px;
+}
+/* Контакты */
+
+.contact{
+    padding: 20px 20px 60px 20px;
+    width: 100%;
+}
+.contact>p{
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.contact>.forma{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    height: 300px;
+}
+.contact>.forma>iframe{
+    width: 50%;
+}
+.contact>.forma>form{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
+.contact>.forma>form div{
+    display: flex;
+    width: 100%;
+}
+.contact>.forma>form div input{
+    width: 50%;
+}
+.contact>.forma input,textarea{
+    margin: 10px;
+    padding: 5px;
+    background-color: rgba(236, 234, 234, 0.61);
+    border: none;
+    border-bottom: 1px solid grey;
+}
+.contact>.forma button{
+    width: 30%;
+    margin: 10px;
+    background-color: white;
+    border: none;
+    text-transform: uppercase;
+    color: #12be60;
+    font-weight: 700;
+    text-align: center;
+}
+
+/* Футер */
+
+footer{
+    padding: 0 50px;
+    background-color: #12be60;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    color: white;
+}
+footer>div{
+    display: flex;
+}
+footer>div div{
+    width: 25px;
+    height: 25px;
+    background-color: #51c989;
+    margin: 0 10px;
+    text-align: center;
+}
+@media screen and (max-width:1200px){
+    .slider input,
+    .slider input:checked+label .chec,
+    .slider label img,
+    .prod .img-logo{
+        display: none;
+    }
+    .slider{
+        grid:100%/100% ;
+    }
+    .slider>.slides {
+        grid-row: 1/1;
+        grid-column: 1/1;
+    }
+}
+@media screen and (max-width:950px){
+    .slider>.slides>.zag{
+        width: 80%;
+        bottom: 10%;
+        left: 10%;
+        text-align: center;
+    }
+}
+@media screen and (max-width:850px){
+    header{
+        display: flex;
+        flex-direction: column;
+    }
+    header>.navig{
+        height: 70px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+}
+@media screen and (max-width:675px){
+    .services{
+        display: grid;
+        grid: 50% 50%/50% 50%;
+    }
+    .services p{
+        display: none;
+    }
+    .new-products>.item2 .left,.right{
+        display: none;
+    }
+    .new-products>.item2 .center{
+        width: 100%;
+    }
+    .main-zag img{
+        display: none;
+    }
+    .contact>p{
+        width: 100%;
+    }
+}
+@media screen and (max-width:500px){
+    header{
+        padding: 0;
+        flex-direction: row;
+        height: 120px;
+    }
+    header .navig{
+        height: 120px;
+        margin-left: 20px;
+    }
+    header ul>li:hover img{
+        display: none;
+    }
+    header ul{
+        display: flex;
+        flex-direction: column;
+    }
+    header ul li{
+        width: 100%;
+    } 
+    .all-products> .gri{
+        grid:25% 25% 25% 25% / 50% 50%;
+    }
+}
+@media screen and (max-width:415px){
+    header{
+        flex-direction: column;
+        height: 220px;
+    }
+}
+@media screen and (max-width:375px){
+    .slider>.slides>.zag span{
+        display: none;
+    }
+}
